@@ -1,0 +1,34 @@
+//
+//  Eleven-Prefix.pch
+//  Eleven
+//
+//  Created by coderyi on 15/8/18.
+//  Copyright (c) 2015年 coderyi. All rights reserved.
+//
+
+#ifndef Eleven_Eleven_Prefix_pch
+#define Eleven_Eleven_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#define SJWeakObj(o) autoreleasepool{} __weak typeof(o) sjWeak##o = o;     // 弱引用
+# define SJStrongObj(o) autoreleasepool{} __strong typeof(o) o = sjWeak##o; // 强引用
+
+#import "Constants.h"
+#import "ToolClass.h"
+#import "NSString+Extension.h"
+#import "UIColor+Hex.h"
+#import "UIBarButtonItem+Item.h"
+#import "UIView+Frame.h"
+#import "AVNetApi.h"
+#import "MBProgressHUD+MJ.h"
+#import "UIImageView+WebCache.h"
+#import "BaseNavigationController.h"
+#import "Masonry.h"
+
+#endif
+#ifdef __OBJC__
+#import "GPUImage.h"
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#endif
